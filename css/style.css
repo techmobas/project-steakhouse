@@ -1,273 +1,384 @@
 /* CSS for All */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
-  margin: 0 0;
-  padding: 0 0;
-  font-family: 'Bebas Neue', cursive;
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Bebas Neue', cursive;
 }
+
 .container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
 }
+
 .img-responsive {
-  width: 100%;
+    width: 100%;
 }
+
 .img-curve {
-  border-radius: 15px;
+    border-radius: 15px;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
+
 .text-center {
-  text-align: center;
+    text-align: center;
 }
+
 .text-left {
-  text-align: left;
+    text-align: left;
 }
+
 .text-white {
-  color: white;
+    color: white;
 }
 
 .clearfix {
-  clear: both;
-  float: none;
+    clear: both;
+    float: none;
 }
 
 a {
-  color: #5d9e5f;
-  text-decoration: none;
+    color: #5d9e5f;
+    text-decoration: none;
 }
+
 a:hover {
-  color: #5d9e5f;
+    color: #5d9e5f;
 }
 
 .btn {
-  padding: 1%;
-  border: none;
-  font-size: 1rem;
-  border-radius: 5px;
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
 }
+
 .btn-primary {
-  background-color: #5d9e5f;
-  color: white;
-  cursor: pointer;
+    background-color: #5d9e5f;
+    color: white;
+    cursor: pointer;
 }
+
 .btn-primary:hover {
-  color: white;
-  background-color: #5d9e5f;
+    color: white;
+    background-color: #5d9e5f;
 }
+
 h2 {
-  color: #2f3542;
-  font-size: 2rem;
-  margin-bottom: 2%;
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
 }
+
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
+
 .float-container {
-  position: relative;
+    position: relative;
 }
+
 .float-text {
-  position: absolute;
-  bottom: 50px;
-  left: 40%;
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
 }
+
 fieldset {
-  border: 1px solid white;
-  margin: 5%;
-  padding: 3%;
-  border-radius: 5px;
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
 }
 
 .error {
-  padding: 2%;
-  color: red;
+    padding: 2%;
+    color: red;
 }
+
 .success {
-  padding: 2%;
-  color: green;
+    padding: 2%;
+    color: green;
 }
+
 
 /* CSSS for navbar section */
 
 .logo {
-  width: 10%;
-  float: left;
+    width: 10%;
+    float: left;
 }
+
 .menu {
-  line-height: 60px;
+    line-height: 60px;
 }
+
 .menu ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .menu ul li {
-  display: inline;
-  padding: 1%;
-  font-weight: bold;
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
 }
+
 
 /* CSS for Food SEarch Section */
 
 .food-search {
-  background-image: url(../images/fosyyyy.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 7% 0;
+    background-image: url(../images/fosyyyy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
 }
 
 .food-search input[type="search"] {
-  width: 50%;
-  padding: 1%;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
 }
 
 .food-search2 {
-  background-image: url(../images/ibg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 7% 0;
+    background-image: url(../images/ibg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
 }
 
 .food-search2 input[type="search"] {
-  width: 50%;
-  padding: 1%;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
 }
 
+
 /* CSS for Categories */
+
 .categories {
-  padding: 4% 0;
+    padding: 4% 0;
 }
 
 .box-3 {
-  width: 28%;
-  float: left;
-  margin: 2%;
+    width: 28%;
+    float: left;
+    margin: 2%;
 }
 
+
 /* CSS for Food Menu */
+
 .food-menu {
-  background-color: #ececec;
-  padding: 4% 0;
+    background-color: #ececec;
+    padding: 4% 0;
 }
+
 .food-menu-box {
-  width: 43%;
-  margin: 1%;
-  padding: 2%;
-  float: left;
-  background-color: white;
-  border-radius: 15px;
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
 }
 
 .food-menu-img {
-  width: 20%;
-  float: left;
+    width: 20%;
+    float: left;
 }
 
 .food-menu-desc {
-  width: 70%;
-  float: left;
-  margin-left: 8%;
+    width: 70%;
+    float: left;
+    margin-left: 8%;
 }
 
 .food-price {
-  font-size: 1.2rem;
-  margin: 2% 0;
+    font-size: 1.2rem;
+    margin: 2% 0;
 }
+
 .food-detail {
-  font-size: 1rem;
-  color: #747d8c;
+    font-size: 1rem;
+    color: #747d8c;
 }
+
 
 /* CSS for Social */
+
 .social ul {
-  list-style-type: none;
-}
-.social ul li {
-  display: inline;
-  padding: 1%;
+    list-style-type: none;
 }
 
+.social ul li {
+    display: inline;
+    padding: 1%;
+}
+
+
 /* for Order Section */
+
 .order {
-  width: 50%;
-  margin: 0 auto;
+    width: 50%;
+    margin: 0 auto;
 }
+
 .input-responsive {
-  width: 96%;
-  padding: 1%;
-  margin-bottom: 3%;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+    width: 96%;
+    padding: 1%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
 .order-label {
-  margin-bottom: 1%;
-  font-weight: bold;
+    margin-bottom: 1%;
+    font-weight: bold;
 }
+
 
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width: 768px) {
-  .logo {
-    width: 80%;
-    float: none;
-    margin: 1% auto;
-  }
+    .logo {
+        width: 80%;
+        float: none;
+        margin: 1% auto;
+    }
+    .menu ul {
+        text-align: center;
+    }
+    .food-search input[type="search"] {
+        width: 90%;
+        padding: 2%;
+        margin-bottom: 3%;
+    }
+    .btn {
+        width: 91%;
+        padding: 2%;
+    }
+    .food-search {
+        padding: 10% 0;
+    }
+    .categories {
+        padding: 20% 0;
+    }
+    h2 {
+        margin-bottom: 10%;
+    }
+    .box-3 {
+        width: 100%;
+        margin: 4% auto;
+    }
+    .food-menu {
+        padding: 20% 0;
+    }
+    .food-menu-box {
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social {
+        padding: 5% 0;
+    }
+    .order {
+        width: 100%;
+    }
+}
 
-  .menu ul {
-    text-align: center;
-  }
+.jumbotron {
+    position: relative;
+    background-image: url('C:\xampp\htdocs\project-steakhouse\images\bg.jpg');
+}
 
-  .food-search input[type="search"] {
-    width: 90%;
-    padding: 2%;
-    margin-bottom: 3%;
-  }
-
-  .btn {
-    width: 91%;
-    padding: 2%;
-  }
-
-  .food-search {
-    padding: 10% 0;
-  }
-
-  .categories {
-    padding: 20% 0;
-  }
-  h2 {
-    margin-bottom: 10%;
-  }
-  .box-3 {
+.jumbotron:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('C:\xampp\htdocs\project-steakhouse\images\bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    margin: 4% auto;
-  }
+    height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
 
-  .food-menu {
-    padding: 20% 0;
-  }
+.navbar {
+    transition: all 0.4s;
+}
 
-  .food-menu-box {
-    width: 90%;
-    padding: 5%;
-    margin-bottom: 5%;
-  }
-  .social {
-    padding: 5% 0;
-  }
-  .order {
-    width: 100%;
-  }
+.navbar .nav-link {
+    color: #000;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #000;
+}
+
+
+/* Change navbar styling on scroll */
+
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* .carousel-item {
+  height: 65vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+
+/* Change navbar styling on small viewports */
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #555;
+    }
 }
