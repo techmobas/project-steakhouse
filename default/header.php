@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="css/script.js"><script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
@@ -40,10 +41,12 @@
             <a class="nav-link" href="signup.php">Sign Up</a>
         </li>
         </ul>
+        <!-- <div class="container"> -->
         <form class="form-inline my-2 my-lg-0" action="food-search.php" method="POST">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+            <input type="submit" name="submit" value="Search" class="btn btn-danger">
         </form>
+        <!-- </div> -->
     </div>
     </nav>
 
