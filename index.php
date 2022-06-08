@@ -1,18 +1,7 @@
     <?php include('default/header.php'); ?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
-        <div class="container">
-            
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search Foods" required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
-            </form>
-
-        </div>
-    </section>
-    
-
+    <!-- <p></p></br>
+    <p></p> -->
     <?php 
         if(isset($_SESSION['order']))
         {
@@ -20,7 +9,15 @@
             unset($_SESSION['order']);
         }
     ?>
-     <section class="categories">
+    <section class="categories">
+        <div class="jumbotron pt-6">
+            <h1 class="display-4">Hello Dear!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-danger btn-lg" href="signin.php" role="button">Sign In Now</a>
+        </div>
+
         <div class="container">
             <h2 class="text-center">About Us</h2>
 
@@ -54,7 +51,7 @@
                         $image_name = $row['image_name'];
                         ?>
                         
-                        <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
+                        <a href="category-foods.php?category_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php 
                                     //Check whether Image is available or not
@@ -67,12 +64,10 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <img src="images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
-                                
-
                                 <h3 class="float-text text-white" ><mark style="background-color:white;"><?php echo $title; ?></mark></h3>
                             </div>
                         </a>
@@ -92,7 +87,6 @@
         </div>
     </section>
     <!-- Categories Section Ends Here -->
-
 
     
     <?php include('default/footer.php'); ?>

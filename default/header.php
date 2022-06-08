@@ -3,45 +3,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
-    <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorem Ipsum</title>
-
-    <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="css/script.js"><script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
 </head>
 
 <body>
-    <!-- Navbar Section Starts Here -->
-    <section class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="#" title="Logo">
-                    Logo
-                </a>
-            </div>
-
-            <div class="menu text-right">
-                <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Categories</a>
-                    </li>
-                    <li>
-                        <a href="#">Login</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="clearfix"></div>
-        </div>
-    </section>
-    <!-- Navbar Section Ends Here -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+    <a class="navbar-brand" href="index.php">Steakhouse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="category-foods.php">Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="categories.php">Reservation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signin.php">Sign In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.php">Sign Up</a>
+        </li>
+        </ul>
+        <!-- <div class="container"> -->
+        <form class="form-inline my-2 my-lg-0" action="food-search.php" method="POST">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+            <input type="submit" name="submit" value="Search" class="btn btn-danger">
+        </form>
+        <!-- </div> -->
+    </div>
+    </nav>
+    </body>
+    </html>
