@@ -1,7 +1,7 @@
     <?php include('default/header.php'); ?>
 
-    <p></p></br>
-    <p></p>
+    <!-- <p></p></br>
+    <p></p> -->
     <?php 
         if(isset($_SESSION['order']))
         {
@@ -9,7 +9,15 @@
             unset($_SESSION['order']);
         }
     ?>
-     <section class="categories">
+    <section class="categories">
+        <div class="jumbotron pt-6">
+            <h1 class="display-4">Hello Dear!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-danger btn-lg" href="signin.php" role="button">Sign In Now</a>
+        </div>
+
         <div class="container">
             <h2 class="text-center">About Us</h2>
 
