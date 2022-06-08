@@ -4,7 +4,7 @@
         <!-- Main Content Section Starts -->
         <div class="main-content">
             <div class="wrapper">
-                <h1>Manage Admin</h1>
+                <h1>Customer List</h1>
 
                 <br />
 
@@ -49,22 +49,20 @@
                 <br><br><br>
 
                 <!-- Button to Add Admin -->
-                <a href="add-admin.php" class="btn-primary">Add Admin</a>
-
                 <br /><br /><br />
 
                 <table class="tbl-full">
                     <tr>
-                        <th>S.N.</th>
+                        <th>I.D.</th>
+                        <th>E-Mail</th>
                         <th>Full Name</th>
-                        <th>Username</th>
-                        <th>Actions</th>
+                        <th>Phone Number</th>
                     </tr>
 
                     
                     <?php 
                         //Query to Get all Admin
-                        $sql = "SELECT * FROM tbl_admin";
+                        $sql = "SELECT * FROM tbl_customer";
                         //Execute the Query
                         $res = mysqli_query($conn, $sql);
 
@@ -87,21 +85,19 @@
 
                                     //Get individual DAta
                                     $id=$rows['id'];
+                                    $email=$rows['email'];
                                     $full_name=$rows['full_name'];
-                                    $username=$rows['username'];
+                                    $phone=$rows['phone_number'];
+
 
                                     //Display the Values in our Table
                                     ?>
                                     
                                     <tr>
                                         <td><?php echo $sn++; ?>. </td>
+                                        <td><?php echo $email; ?></td>
                                         <td><?php echo $full_name; ?></td>
-                                        <td><?php echo $username; ?></td>
-                                        <td>
-                                            <a href="update-password.php?id=<?php echo $id; ?>" class="btn-primary">Change Password</a>
-                                            <a href="update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
-                                            <a href="delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Admin</a>
-                                        </td>
+                                        <td><?php echo $phone; ?></td>
                                     </tr>
 
                                     <?php
@@ -122,4 +118,3 @@
 
             </div>
         </div>
-        <!-- Main Content Setion Ends -->

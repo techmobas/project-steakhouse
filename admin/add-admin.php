@@ -78,7 +78,7 @@
         ";
  
         //3. Executing Query and Saving Data into Datbase
-        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+        $res = mysqli_query($conn, $sql) or die(mysqli_connect_error());
 
         //4. Check whether the (Query is Executed) data is inserted or not and display appropriate message
         if($res==TRUE)
@@ -88,7 +88,7 @@
             //Create a Session Variable to Display Message
             $_SESSION['add'] = "<div class='success'>Admin Added Successfully.</div>";
             //Redirect Page to Manage Admin
-            header("location:".SITEURL.'admin/manage-admin.php');
+            header("location: manage-admin.php");
         }
         else
         {
@@ -97,7 +97,7 @@
             //Create a Session Variable to Display Message
             $_SESSION['add'] = "<div class='error'>Failed to Add Admin.</div>";
             //Redirect Page to Add Admin
-            header("location:".SITEURL.'admin/add-admin.php');
+            header("location: add-admin.php");
         }
 
     }
