@@ -1,508 +1,170 @@
-/* CSS for All */
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-* {
-    margin: 0 0;
-    padding: 0 0;
-    font-family: 'Bebas Neue', cursive;
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  background: #fafafa;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1%;
+h1, h2, h3, h4, h5, h6{
+  font-family: "Bebas Neue", sans-serif;
+  color: #da0000;
 }
 
-.img-responsive {
+p{
+  font-size: 18px;
+}
+
+#sidebar{
+  background-color: #fff;
+  background-image: linear-gradient(#ffffff, #ffffff);
+}
+
+#sidebar ul li a{color: #40394a; font-size: 21px;}
+#sidebar ul li a:hover {color: #e62c48; }
+#sidebar ul li.active > a {
+  background: transparent;
+  color: #da0000; }
+#sidebar ul li.active > a:hover {
+  background: transparent;
+  color: #810000; }
+
+#sidebar .custom-menu .btn.btn-primary {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+#sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+  background: #da0000;
+  border-color: #da0000; 
+  color: #ffffff;
+}
+
+
+
+.btn.btn-primary {
+    background: #da0000;
+    border-color: #da0000;
+    color:#ffffff; }
+.btn:hover, .btn.btn-primary:focus {
+    background: #da0000;
+    border-color: #da0000; }
+
+.btn-primary:hover{color:#ffffff}
+.btn-primary:focus {color:#ffffff}
+
+.bg-green{
+  background-color: #da0000;
+}
+
+.news {
+  width: 100%;
+  height: 900px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px){
+  .news {
     width: 100%;
+  }
 }
 
-.img-curve {
-  border-radius: 15px;  
+@media screen and (max-width: 767px){
+  .news {
+    width: 100%;
+  }
 }
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-white {
-    color: white;
-}
-
-.clearfix {
-    clear: both;
-    float: none;
-}
-
-a {
-    color: #5d9e5f;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #5d9e5f;
-}
-
-h2 {
-    color: #2f3542;
-    font-size: 2rem;
-    margin-bottom: 2%;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-.float-container {
-    position: relative;
-}
-
-.float-text {
-    position: absolute;
-    bottom: 50px;
-    left: 40%;
-}
-
-fieldset {
-    border: 1px solid white;
-    margin: 5%;
-    padding: 3%;
-    border-radius: 5px;
-}
-
-.error {
-    padding: 2%;
-    color: red;
-}
-
-.success {
-    padding: 2%;
-    color: green;
-}
-
-
-/* CSSS for navbar section */
-
-.logo {
-    width: 10%;
-    float: left;
-}
-
-.menu {
-    line-height: 60px;
-}
-
-.menu ul {
-    list-style-type: none;
-}
-
-.menu ul li {
-    display: inline;
-    padding: 1%;
-    font-weight: bold;
-}
-
-
-/* CSS for Food SEarch Section */
-
-.food-search {
-    background-image: url(../images/fosyyyy.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 7% 0;
-}
-
-.food-search input[type="search"] {
-    width: 50%;
-    padding: 1%;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-}
-
-.food-search2 {
-    background-image: url(../images/ibg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 7% 0;
-}
-
-.food-search2 input[type="search"] {
-    width: 50%;
-    padding: 1%;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-}
-
 
 /* CSS for Categories */
-
 .categories {
-    padding: 4% 0;
+  padding: 4% 0;
 }
 
 .text-left-categori{
-  text-align: left;
-  color: #2f3542;
+text-align: left;
+color: #2f3542;
 }
 
 .line{
-  height: 2px;
-  background-color: black;
-  position: relative;
-  top: 55px;
-  width: 80%;
-  margin: 0 auto;
+height: 3px;
+background-color: black;
+position: relative;
+margin: 0 auto;
+bottom: 40px;
 }
 
 .box-3 {
-    width: 28%;
-    float: left;
-    margin: 2%;
+  width: 28%;
+  float: left;
+  margin: 2%;
 }
 
 .container_categori{
-  width: 80%;
-  margin: 0 auto;
-  padding: 1%;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overflow: hidden;
+width: 80%;
+margin: 0 auto;
+padding: 1%;
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth;
+overflow: hidden;
 }
 
 .box-3-categori {
-  flex: 0 0 auto;
-  margin-right: 10px;
+flex: 0 0 auto;
+margin-right: 10px;
 }
 
 
 .img-responsive-category{
-  position: relative;
-  width: 420px;
-  height: 300px;
-  overflow: hidden;
+position: relative;
+width: 400px;
+height: 300px;
+overflow: hidden;
+border-radius: 15px;
 }
 
 .float-container-categori {
-  position: relative;
+position: relative;
 }
 
 .float-text-categori {
-  position: absolute;
-  background-color: #5d9e5f;
-  width: 100%;
-  height: 20%;
-  text-align: center;
-  border-radius: 15px; 
-  top: 239px;
-  vertical-align: middle;
+position: absolute;
+background-color: #5d9e5f;
+width: 100%;
+height: 20%;
+text-align: center;
+border-radius: 15px; 
+top: 239px;
+vertical-align: middle;
 }
 
 .pre-btn,
 .nxt-btn {
-  border: none;
-  width: 10vw;
-  height: 45%;
-  position: absolute;
-  top: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  cursor: pointer;
-  z-index: 8;
+border: none;
+width: 10vw;
+height: 45%;
+position: absolute;
+top: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+cursor: pointer;
+z-index: 8;
 }
 
 .pre-btn {
-  left: 0;
-  transform: rotate(180deg);
+left: 0;
+transform: rotate(180deg);
 }
 
 .nxt-btn {
-  right: 0;
+right: 0;
 }
 
 .pre-btn img,
 .nxt-btn img {
-  opacity: 0.2;
+opacity: 0.2;
 }
 
 .pre-btn:hover img,
 .nxt-btn:hover img {
-  opacity: 1;
-}
-/* CSS for Food Menu */
-
-.food-menu {
-    background-color: #ececec;
-    padding: 4% 0;
-}
-
-.food-menu-box {
-    width: 43%;
-    margin: 1%;
-    padding: 2%;
-    float: left;
-    background-color: white;
-    border-radius: 15px;
-}
-
-.food-menu-img {
-    width: 20%;
-    float: left;
-}
-
-.food-menu-desc {
-    width: 70%;
-    float: left;
-    margin-left: 8%;
-}
-
-.food-price {
-    font-size: 1.2rem;
-    margin: 2% 0;
-}
-
-.food-detail {
-    font-size: 1rem;
-    color: #747d8c;
-}
-
-
-/* CSS for Social */
-
-.social ul {
-    list-style-type: none;
-}
-
-.social ul li {
-    display: inline;
-    padding: 1%;
-}
-
-/* CSS for Copyright */
-.container-copyright{
-  width: 80%;
-  margin: 0 auto;
-  padding: 1%;
-  margin-top: 100px;
-} 
-
-/* for Order Section */
-
-.order {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.input-responsive {
-    width: 96%;
-    padding: 1%;
-    margin-bottom: 3%;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.order-label {
-    margin-bottom: 1%;
-    font-weight: bold;
-}
-/* CSS for Mobile Size or Smaller Screen */
-
-@media only screen and (max-width: 768px) {
-    .logo {
-        width: 80%;
-        float: none;
-        margin: 1% auto;
-    }
-    .menu ul {
-        text-align: center;
-    }
-    .food-search input[type="search"] {
-        width: 90%;
-        padding: 2%;
-        margin-bottom: 3%;
-    }
-    .btn {
-        width: 91%;
-        padding: 2%;
-    }
-    .food-search {
-        padding: 10% 0;
-    }
-    .categories {
-        padding: 20% 0;
-    }
-    h2 {
-        margin-bottom: 10%;
-    }
-    .box-3 {
-        width: 100%;
-        margin: 4% auto;
-    }
-    .food-menu {
-        padding: 20% 0;
-    }
-    .food-menu-box {
-        width: 90%;
-        padding: 5%;
-        margin-bottom: 5%;
-    }
-    .social {
-        padding: 5% 0;
-    }
-    .order {
-        width: 100%;
-    }
-}
-
-.jumbotron {
-    position: relative;
-    background-image: url('C:\xampp\htdocs\project-steakhouse\images\bg.jpg');
-}
-
-  .btn {
-    width: 91%;
-    padding: 2%;
-  }
-
-  .food-search {
-    padding: 10% 0;
-  }
-
-  .categories {
-    padding: 20% 0;
-  }
-  h2 {
-    margin-bottom: 10%;
-  }
-  .box-3 {
-    width: 100%;
-    margin: 4% auto;
-  }
-
-  .img-responsive-category{
-    position: relative;
-    width: 290px;
-    height: 300px;
-  }
-
-  .pre-btn,
-  .nxt-btn {
-    top: 38%;
-    height: 40%;
-  }
-
-  .pre-btn img,
-  .nxt-btn img {
-    opacity: 1;
-  }
-
-  .food-menu {
-    padding: 20% 0;
-  }
-
-  .food-menu-box {
-    width: 90%;
-    padding: 5%;
-    margin-bottom: 5%;
-  }
-  .social {
-    padding: 5% 0;
-  }
-  .order {
-
-    
-.jumbotron:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('C:\xampp\htdocs\project-steakhouse\images\bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    z-index: -1;
-}
-
-.navbar {
-    transition: all 0.4s;
-}
-
-.navbar .nav-link {
-    color: #000;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-    color: #000;
-    text-decoration: none;
-}
-
-.navbar .navbar-brand {
-    color: #000;
-}
-
-
-/* Change navbar styling on scroll */
-
-.navbar.active {
-    background: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.active .nav-link {
-    color: #555;
-}
-
-.navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
-    color: #555;
-    text-decoration: none;
-}
-
-.navbar.active .navbar-brand {
-    color: #555;
-}
-
-
-/* .carousel-item {
-  height: 65vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
-
-/* Change navbar styling on small viewports */
-
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
-    .navbar .navbar-brand,
-    .navbar .nav-link {
-        color: #555;
-    }
+opacity: 1;
 }
