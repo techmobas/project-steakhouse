@@ -168,3 +168,11 @@ opacity: 0.2;
 .nxt-btn:hover img {
 opacity: 1;
 }
+
+.img-responsive {
+  width: 100%;
+}
+
+.img-curve {
+  border-radius: 15px;
+}
