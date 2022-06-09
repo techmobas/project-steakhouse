@@ -37,9 +37,12 @@
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                  <input name="login" type="submit" value="Login" class="btn btn-primary btn-lg">
+                    <input name="login" type="submit" value="Login" class="btn btn-success btn-lg">
                   </div>
 
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <p>Belum memiliki Akun, <a href="signup.php">Daftar Sekarang</a></p>
+                  </div>
 
                 </form>
 
@@ -47,13 +50,18 @@
                   if(isset($_GET["error"])){
                     if ($_GET["error"] == "wrong"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Incorrect Email or Password!")';
+                      echo ' alert("Email atau Password salah")';
                       echo "</script>";
                     }
                     
                     else if ($_GET["error"] == "success"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Sign up success, Now Log in")';
+                      echo ' alert("Pendaftaran berhasil, silahkan Login")';
+                      echo "</script>";
+                    }
+                    else if ($_GET["error"] == "nologin"){
+                      echo '<script type="text/javascript">';
+                      echo ' alert("Harap Login atau Daftar untuk memulai proses Booking")';
                       echo "</script>";
                     }
                   }
