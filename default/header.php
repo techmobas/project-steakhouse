@@ -23,17 +23,32 @@
             <a class="nav-link" href="index.php">Home<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="category-foods.php">Menu</a>
+            <a class="nav-link" href="categories.php">Menu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="categories.php">Reservation</a>
+            <a class="nav-link" href="order.php">Reservation</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="signin.php">Sign In</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="signup.php">Sign Up</a>
-        </li>
+
+        <?php 
+            $resultprofile = mysqli_query($conn, "SELECT * FROM tbl_customer");
+            $profilerow = mysqli_fetch_array($resultprofile);
+
+            if (isset($_SESSION["userdata"])) { ?>
+            <li class="nav-item">
+                <a class="nav-link" href="profile.php" style="color: #5d9e5f"><?php echo $profilerow['full_name']; ?></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php?id=22" onclick="return confirm('Are you sure?')" style="color: red">Logout</a>
+            </li> <?php }
+        else { ?>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php" style="color: #5d9e5f">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.php" style="color: orange">Sign Up</a>
+            </li> <?php
+            } ?>
+
         </ul>
         <!-- <div class="container"> -->
         <form class="form-inline my-2 my-lg-0" action="food-search.php" method="POST">

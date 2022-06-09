@@ -106,7 +106,7 @@ table tr td {
 .menu ul li a {
   text-decoration: none;
   font-weight: bold;
-  color: #5d9e5f;
+  color: orange;
 }
 .menu ul li a:hover {
   color: #5d9e5f;
