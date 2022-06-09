@@ -54,9 +54,8 @@
                                         <?php
                                     }
                                 ?>
-                                
-
-                                <h3 class="float-text-categori text-black"><?php echo $title; ?></h3>
+                        
+                                <h3 class="float-text-categori text-white"><?php echo $title; ?></h3>
                             </div>
                         </a>
 

@@ -169,10 +169,6 @@ fieldset {
   margin: 2%;
 }
 
-.text-black{
-  color: black;
-}
-
 .container_categori{
   width: 80%;
   margin: 0 auto;
@@ -202,8 +198,13 @@ fieldset {
 
 .float-text-categori {
   position: absolute;
-  bottom: 20px;
-  left: 40%;
+  background-color: #5d9e5f;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  border-radius: 15px; 
+  top: 239px;
+  vertical-align: middle;
 }
 
 .pre-btn,
@@ -346,6 +347,23 @@ fieldset {
   .box-3 {
     width: 100%;
     margin: 4% auto;
+  }
+
+  .img-responsive-category{
+    position: relative;
+    width: 290px;
+    height: 300px;
+  }
+
+  .pre-btn,
+  .nxt-btn {
+    top: 38%;
+    height: 40%;
+  }
+
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 1;
   }
 
   .food-menu {
