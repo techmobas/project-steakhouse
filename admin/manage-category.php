@@ -53,7 +53,7 @@
         <br><br>
 
                 <!-- Button to Add Admin -->
-                <a href="admin/add-category.php" class="btn-primary">Add Category</a>
+                <a href="add-category.php" class="btn-primary">Add Category</a>
 
                 <br /><br /><br />
 

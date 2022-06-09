@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2022 at 03:22 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jun 09, 2022 at 09:24 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -60,11 +61,11 @@ CREATE TABLE `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
-(4, 'Pizza', 'Food_Category_790.jpg', 'Yes', 'Yes'),
-(5, 'Burger', 'Food_Category_344.jpg', 'Yes', 'Yes'),
-(9, 'Wraps', 'Food_Category_374.jpg', 'Yes', 'Yes'),
-(10, 'Pasta', 'Food_Category_948.jpg', 'Yes', 'Yes'),
-(11, 'Sandwich', 'Food_Category_536.jpg', 'Yes', 'Yes');
+(12, 'Beef Steak', 'Food_Category_771.jpg', 'Yes', 'Yes'),
+(13, 'Chicken Steak', 'Food_Category_286.jpeg', 'Yes', 'Yes'),
+(14, 'Fish Steak', 'Food_Category_13.jpg', 'Yes', 'Yes'),
+(15, 'Pork Steak', 'Food_Category_588.jpg', 'Yes', 'Yes'),
+(16, 'Tempeh Steak', 'Food_Category_138.jpg', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -111,11 +112,15 @@ CREATE TABLE `tbl_food` (
 --
 
 INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
-(4, 'Ham Burger', 'Burger with Ham, Pineapple and lots of Cheese.', '4.00', 'Food-Name-6340.jpg', 5, 'Yes', 'Yes'),
-(5, 'Smoky BBQ Pizza', 'Best Firewood Pizza in Town.', '9.00', 'Food-Name-8298.jpg', 4, 'No', 'Yes'),
-(9, 'Chicken Wrap', 'Crispy flour tortilla loaded with juicy chicken, bacon, lettuce, avocado and cheese drizzled with a delicious spicy Ranch dressing.', '5.00', 'Food-Name-3461.jpg', 9, 'Yes', 'Yes'),
-(10, 'Cheeseburger', 'A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty.', '4.00', 'Food-Name-433.jpeg', 5, 'Yes', 'Yes'),
-(11, 'Grilled Cheese Sandwich', 'Assembled by creating a cheese filling, often cheddar or American between two slices of bread and is then heated until the bread browns and cheese melts.', '3.00', 'Food-Name-3631.jpg', 11, 'Yes', 'Yes');
+(12, 'BBQ Beef Steak', 'Steak daging yang dilumuri oleh saos BBQ', '85000.00', 'Food-Name-2825.jpg', 12, 'Yes', 'Yes'),
+(13, 'Mushroom Sous Beef Steak', 'Steak daging yang dilumuri oleh saos jamur', '90000.00', 'Food-Name-5390.jpg', 12, 'Yes', 'Yes'),
+(14, 'BBQ Fish Steak', 'Steak ikan yang dilumuri oleh saos BBQ', '82000.00', 'Food-Name-5686.jpg', 14, 'Yes', 'Yes'),
+(15, 'Mushroom Sous Fish Steak', 'Steak ikan yang dilumuri oleh saos jamur', '87000.00', 'Food-Name-2341.jpg', 14, 'Yes', 'Yes'),
+(16, 'BBQ Pork Steak', 'Steak babi yang dilumuri oleh saos BBQ', '100000.00', 'Food-Name-224.jpg', 15, 'Yes', 'Yes'),
+(17, 'Mushroom Sous Pork Steak', 'Steak babi yang dilumuri oleh saos jamur', '105000.00', 'Food-Name-5360.jpg', 15, 'Yes', 'Yes'),
+(18, 'BBQ Chicken Steak', 'Steak ayam yang dilumuri oleh saos BBQ', '76000.00', 'Food-Name-2041.jpg', 13, 'Yes', 'Yes'),
+(19, 'Mushroom Sous Chicken Steak', 'Steak ayam yang dilumuri oleh saos jamur', '81000.00', 'Food-Name-6779.jpg', 13, 'Yes', 'Yes'),
+(20, 'BBQ Tempeh Steak', 'Steak tempe yang dilumuri oleh saos BBQ', '83000.00', 'Food-Name-3138.jpg', 16, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -192,7 +197,7 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_customer`
@@ -204,7 +209,7 @@ ALTER TABLE `tbl_customer`
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`

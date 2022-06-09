@@ -36,7 +36,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                        <input name="fullname" type="text" id="form3Example1c" class="form-control" placeholder="Full Name" required/>
+                        <input name="fullname" type="text" id="form3Example1c" class="form-control" placeholder="Nama Panjang" required/>
                     </div>
                   </div>
 
@@ -50,14 +50,14 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input name="repeat_password" type="password" id="form3Example1c" class="form-control" placeholder="Repeat Password" required/>
+                      <input name="repeat_password" type="password" id="form3Example1c" class="form-control" placeholder="Ulangi Password" required/>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input name="phone" type="number" id="form3Example1c" class="form-control" placeholder="Phone Number" required/>
+                      <input name="phone" type="number" id="form3Example1c" class="form-control" placeholder="Nomor Telepon" required/>
                     </div>
                   </div>
                   
@@ -65,6 +65,9 @@
                     <input name="signup" type="submit" value="Sign Up" class="btn btn-primary btn-lg">
                   </div>
 
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <p>Sudah memiliki akun, <a href="login.php">Login</a></p>
+                  </div>
 
                 </form>
 
@@ -72,25 +75,25 @@
                   if(isset($_GET["error"])){
                     if ($_GET["error"] == "notmatch"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Password do not match!")';
+                      echo ' alert("Password tidak cocok!")';
                       echo "</script>";
                     }
 
                     else if ($_GET["error"] == "invalidEmail"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Invalid Email!")';
+                      echo ' alert("Email tidak cocok!")';
                       echo "</script>";
                     }
 
                     else if ($_GET["error"] == "taken"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Account already exist!")';
+                      echo ' alert("Akun sudah terdaftar!")';
                       echo "</script>";
                     }
 
                     else if ($_GET["error"] == "stmtfailed"){
                       echo '<script type="text/javascript">';
-                      echo ' alert("Something is wrong, please try again!")';
+                      echo ' alert("Harap mencoba kembali!")';
                       echo "</script>";
                     }
                   }

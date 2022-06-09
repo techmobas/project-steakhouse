@@ -5,15 +5,7 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.css"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script> -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-    <script src="https://kit.fontawesome.com/69ff7f27c9.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/69ff7f27c9.js" crossorigin="anonymous"></script> 
 </head>
 
 <body>
@@ -57,7 +49,7 @@
         </ul>
         <!-- <div class="container"> -->
         <form class="form-inline my-2 my-lg-0" action="food-search.php" method="POST">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
+            <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
             <button type="submit" name="submit" class="btn btn-danger"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <!-- </div> -->

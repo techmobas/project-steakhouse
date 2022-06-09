@@ -131,10 +131,6 @@
                 <!-- End Col -->
             </div>
             <!-- End Widget Row -->
-        </div>
-        <!-- End Contact Container -->
-
-
         <div class="copyright">
             <div class="container">
                 <div class="row">

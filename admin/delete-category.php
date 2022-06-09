@@ -10,7 +10,7 @@
         //echo "Get Value and Delete";
         $id = $_GET['id'];
         $image_name = $_GET['image_name'];
-
+        
         //Remove the physical image file is available
         if($image_name != "")
         {
@@ -59,7 +59,6 @@
     }
     else
     {
-        //redirect to Manage Category Page
         header('location: manage-category.php');
     }
 ?>
