@@ -27,7 +27,7 @@
             <?php 
             if (isset($_SESSION["userdata"])) { ?>
                 <a class="btn btn-danger btn-lg" href="order.php" role="button">Book a Table Now</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="btn btn-danger btn-lg" href="category.php" role="button">Browse our Foods</a>
+                <a class="btn btn-danger btn-lg" href="categories.php" role="button">Browse our Foods</a>
             <?php } else { ?>
                 <a class="btn btn-danger btn-lg" href="login.php" role="button">Sign In Now</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="btn btn-danger btn-lg" href="signup.php" role="button">Create an Account</a>
