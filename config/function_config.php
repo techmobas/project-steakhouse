@@ -79,8 +79,8 @@
        }
        else if($checkPass === true){
            session_start();
-           $_SESSION["id"] = $userExist["userId"];
-           $_SESSION["id"] = $userExist["email"];
+           $_SESSION["userid"] = $userExist["id"];
+           $_SESSION["userdata"] = $userExist["email"];
            header("location: ../index.php");
            exit();
        }
