@@ -176,3 +176,17 @@ opacity: 1;
 .img-curve {
   border-radius: 15px;
 }
+
+@media only screen and (max-width: 768px) {
+  .pre-btn,
+  .nxt-btn {
+    height: 50%;
+    position: absolute;
+    top: 45%;
+  }
+
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 1;
+  }
+}
