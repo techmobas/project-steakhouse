@@ -5,8 +5,14 @@
 
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="line"></div>
         <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-left-categori">Menu Categories</h2>
+            <h3 class="text-left-categori">Steak</h3>
+        </div>
+        <div class="container_categori">
 
             <?php 
 
@@ -33,7 +39,7 @@
                         ?>
                         
                         <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
-                            <div class="box-3 float-container">
+                            <div class="box-3-categori float-container-categori">
                                 <?php 
                                     if($image_name=="")
                                     {
@@ -44,13 +50,13 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive-category img-curve">
                                         <?php
                                     }
                                 ?>
                                 
 
-                                <h3 class="float-text text-white"><?php echo $title; ?></h3>
+                                <h3 class="float-text-categori text-black"><?php echo $title; ?></h3>
                             </div>
                         </a>
 
@@ -69,7 +75,8 @@
             <div class="clearfix"></div>
         </div>
     </section>
+    
     <!-- Categories Section Ends Here -->
-
+    <script src="JS/script.js"></script>
 
     <?php include('default/footer.php'); ?>
