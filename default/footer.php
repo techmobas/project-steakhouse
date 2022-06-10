@@ -8,7 +8,7 @@
                             Steakhouse
                         </a>
                         <p class="footer-info-text">
-                        My name is Yoshikage Kira. I'm 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. 
+                        Kami adalah perusahaan Makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan Steak mulai dari beef steak, chicken steak, fish steak, pork steak, tempeh steak. Untuk mengetahui info reservasi, menu, dan lainnya silahkan untuk mengikuti kami di Social Media. 
                         </p>
                         <div class="footer-social-link">
                             <h3>Follow us</h3>

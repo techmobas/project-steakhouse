@@ -42,8 +42,7 @@
             </div>
             </div>
 
-            <p style="color:black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea porro est modi,
-                 autem quisquam magni quas tempora. Beatae odio inventore velit voluptate, nostrum corrupti at. Accusamus, dicta? Libero, velit est.</p>
+            <p style="color:black;">Kami adalah perusahaan Makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan Steak mulai dari beef steak, chicken steak, fish steak, pork steak, tempeh steak.</p>
 
             <div class="clearfix"></div>
         </div>
