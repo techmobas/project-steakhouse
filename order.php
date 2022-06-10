@@ -19,15 +19,12 @@
 
 <style>
 @media (min-width: 1025px) {
-.h-custom {
-height: 100vh !important;
-}
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
 font-size: 1rem;
 line-height: 2.15;
-padding-left: .75em;
+padding-left: .100em;
 padding-right: .75em;
 }
 
@@ -54,7 +51,7 @@ border-bottom-right-radius: 16px;
 }
 </style>
 
-<section class="h-100 h-custom">
+<section class="h-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -96,7 +93,7 @@ border-bottom-right-radius: 16px;
                       </button>
 
                       <input id="form1" min="0" name="quantity_food" value="0" type="number"
-                        class="form-control form-control-sm" />
+                        class="form-control" style="width: 75px;"/>
 
                       <button class="btn btn-link px-2"
                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -105,9 +102,6 @@ border-bottom-right-radius: 16px;
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                       <h6 class="mb-0">IDR. <?php echo $price; ?></h6>
-                    </div>
-                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                     </div>
                   </div>
 

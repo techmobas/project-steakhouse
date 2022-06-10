@@ -37,7 +37,7 @@
                 //CHeck whether categories available or not
                 if($count>0)
                 {
-                    //CAtegories Available
+                    
                     while($row=mysqli_fetch_assoc($res))
                     {
                         //Get the Values
@@ -59,7 +59,7 @@
                                         //Image Available
                                         ?>
 
-                                        <img src="images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive-category img-curve">
+                                        <img src="images/category/<?php echo $image_name; ?>" class="img-responsive-category img-curve">
                                         <?php
                                     }
                                 ?>
@@ -74,7 +74,7 @@
                 else
                 {
                     //CAtegories Not Available
-                    echo "<div class='error'>Category not found.</div>";
+                    echo "<div class='error'>Makanan yang anda cari tidak ditemukan</div>";
                 }
             
             ?>

@@ -23,14 +23,14 @@
                 <form action="config/login_config.php" method="post" class="mx-1 mx-md-4">
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input name="email" type="text" id="form3Example1c" class="form-control" placeholder="Username" required/>
+                      <input name="email" type="text" id="form3Example1c" class="form-control" placeholder="Email" required/>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input name="password" type="password" id="form3Example1c" class="form-control" placeholder="Password" required/>
                     </div>
@@ -41,7 +41,7 @@
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <p>Belum memiliki Akun, <a href="signup.php">Daftar Sekarang</a></p>
+                    <p style="color: black;">Belum memiliki Akun, <a href="signup.php">Daftar Sekarang</a></p>
                   </div>
 
                 </form>
