@@ -103,7 +103,7 @@
                 else
                 {
                     //Food not available
-                    echo "<div class='error'>Food not Available.</div>";
+                    echo "<div class='error'>Makanan yang anda cari tidak ditemukan</div>";
                 }
             
             ?>
