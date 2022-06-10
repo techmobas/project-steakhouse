@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2021 at 07:14 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Jun 09, 2022 at 09:24 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `onlinefoodorder`
+-- Database: `steakhouse`
 --
 
 -- --------------------------------------------------------
@@ -38,10 +40,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
-(1, 'Steeve Moore', 'steeve', 'E10ADC3949BA59ABBE56E057F20F883E'),
-(9, 'Liam Johnson', 'liam', 'E10ADC3949BA59ABBE56E057F20F883E'),
-(10, 'Ramsey', 'ramsey', 'E10ADC3949BA59ABBE56E057F20F883E'),
-(12, 'Administrator', 'admin', 'E10ADC3949BA59ABBE56E057F20F883E');
+(1, 'Administrator', 'admin', 'E10ADC3949BA59ABBE56E057F20F883E');
 
 -- --------------------------------------------------------
 
@@ -62,11 +61,34 @@ CREATE TABLE `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
-(4, 'Pizza', 'Food_Category_790.jpg', 'Yes', 'Yes'),
-(5, 'Burger', 'Food_Category_344.jpg', 'Yes', 'Yes'),
-(9, 'Wraps', 'Food_Category_374.jpg', 'Yes', 'Yes'),
-(10, 'Pasta', 'Food_Category_948.jpg', 'Yes', 'Yes'),
-(11, 'Sandwich', 'Food_Category_536.jpg', 'Yes', 'Yes');
+(12, 'Beef Steak', 'Food_Category_771.jpg', 'Yes', 'Yes'),
+(13, 'Chicken Steak', 'Food_Category_286.jpeg', 'Yes', 'Yes'),
+(14, 'Fish Steak', 'Food_Category_13.jpg', 'Yes', 'Yes'),
+(15, 'Pork Steak', 'Food_Category_588.jpg', 'Yes', 'Yes'),
+(16, 'Tempeh Steak', 'Food_Category_138.jpg', 'Yes', 'Yes');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_customer`
+--
+
+CREATE TABLE `tbl_customer` (
+  `id` int(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `phone_number` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_customer`
+--
+
+INSERT INTO `tbl_customer` (`id`, `email`, `full_name`, `password`, `phone_number`) VALUES
+(3, 'halo@halo.com', 'Halo Kau', '$2y$10$zFC1TmIkjGXIEMpJM.R5l.GoznSLzfG0JRg/S9ttLrd/CXqv3Pz.6', 12122),
+(5, 'abc@abc.id', 'ABC', '$2y$10$5beNvBEx6xi.AjyMlDGTjOJz7ibfMTRcEH5iUXUBWryyCZM6I61tC', 454325452345),
+(6, 'test@test.ff', 'test', '$2y$10$FKdhqaOKvVALJTpbCsZYIemWS/701ASC4WAlK6p/StG9EcgYmbbKa', 4353466);
 
 -- --------------------------------------------------------
 
@@ -90,11 +112,15 @@ CREATE TABLE `tbl_food` (
 --
 
 INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
-(4, 'Ham Burger', 'Burger with Ham, Pineapple and lots of Cheese.', '4.00', 'Food-Name-6340.jpg', 5, 'Yes', 'Yes'),
-(5, 'Smoky BBQ Pizza', 'Best Firewood Pizza in Town.', '9.00', 'Food-Name-8298.jpg', 4, 'No', 'Yes'),
-(9, 'Chicken Wrap', 'Crispy flour tortilla loaded with juicy chicken, bacon, lettuce, avocado and cheese drizzled with a delicious spicy Ranch dressing.', '5.00', 'Food-Name-3461.jpg', 9, 'Yes', 'Yes'),
-(10, 'Cheeseburger', 'A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty.', '4.00', 'Food-Name-433.jpeg', 5, 'Yes', 'Yes'),
-(11, 'Grilled Cheese Sandwich', 'Assembled by creating a cheese filling, often cheddar or American between two slices of bread and is then heated until the bread browns and cheese melts.', '3.00', 'Food-Name-3631.jpg', 11, 'Yes', 'Yes');
+(12, 'BBQ Beef Steak', 'Steak daging yang dilumuri oleh saos BBQ', '85000.00', 'Food-Name-2825.jpg', 12, 'Yes', 'Yes'),
+(13, 'Mushroom Sous Beef Steak', 'Steak daging yang dilumuri oleh saos jamur', '90000.00', 'Food-Name-5390.jpg', 12, 'Yes', 'Yes'),
+(14, 'BBQ Fish Steak', 'Steak ikan yang dilumuri oleh saos BBQ', '82000.00', 'Food-Name-5686.jpg', 14, 'Yes', 'Yes'),
+(15, 'Mushroom Sous Fish Steak', 'Steak ikan yang dilumuri oleh saos jamur', '87000.00', 'Food-Name-2341.jpg', 14, 'Yes', 'Yes'),
+(16, 'BBQ Pork Steak', 'Steak babi yang dilumuri oleh saos BBQ', '100000.00', 'Food-Name-224.jpg', 15, 'Yes', 'Yes'),
+(17, 'Mushroom Sous Pork Steak', 'Steak babi yang dilumuri oleh saos jamur', '105000.00', 'Food-Name-5360.jpg', 15, 'Yes', 'Yes'),
+(18, 'BBQ Chicken Steak', 'Steak ayam yang dilumuri oleh saos BBQ', '76000.00', 'Food-Name-2041.jpg', 13, 'Yes', 'Yes'),
+(19, 'Mushroom Sous Chicken Steak', 'Steak ayam yang dilumuri oleh saos jamur', '81000.00', 'Food-Name-6779.jpg', 13, 'Yes', 'Yes'),
+(20, 'BBQ Tempeh Steak', 'Steak tempe yang dilumuri oleh saos BBQ', '83000.00', 'Food-Name-3138.jpg', 16, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -121,14 +147,7 @@ CREATE TABLE `tbl_order` (
 --
 
 INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `status`, `customer_name`, `customer_contact`, `customer_email`, `customer_address`) VALUES
-(2, 'Best Burger', '4.00', 4, '16.00', '2020-11-30 03:52:43', 'Delivered', 'Kelly Dillard', '7896547800', 'kelly@gmail.com', '308 Post Avenue'),
-(3, 'Mixed Pizza', '10.00', 2, '20.00', '2020-11-30 04:07:17', 'Delivered', 'Thomas Gilchrist', '7410001450', 'thom@gmail.com', '1277 Sunburst Drive'),
-(4, 'Mixed Pizza', '10.00', 1, '10.00', '2021-05-04 01:35:34', 'Delivered', 'Martha Woods', '78540001200', 'marthagmail.com', '478 Avenue Street'),
-(6, 'Chicken Wrap', '7.00', 1, '7.00', '2021-07-20 06:10:37', 'Delivered', 'Charlie', '7458965550', 'charlie@gmail.com', '3140 Bartlett Avenue'),
-(7, 'Cheeseburger', '4.00', 2, '8.00', '2021-07-20 06:40:21', 'On Delivery', 'Claudia Hedley', '7451114400', 'hedley@gmail.com', '1119 Kinney Street'),
-(8, 'Smoky BBQ Pizza', '6.00', 1, '6.00', '2021-07-20 06:40:57', 'Ordered', 'Vernon Vargas', '7414744440', 'venno@gmail.com', '1234 Hazelwood Avenue'),
-(9, 'Chicken Wrap', '5.00', 4, '20.00', '2021-07-20 07:06:06', 'Cancelled', 'Carlos Grayson', '7401456980', 'carlos@gmail.com', '2969 Hartland Avenue'),
-(10, 'Grilled Cheese Sandwich', '3.00', 4, '12.00', '2021-07-20 07:11:06', 'Delivered', 'Jonathan Caudill', '7410256996', 'jonathan@gmail.com', '1959 Limer Street');
+(2, 'Best Burger', '4.00', 4, '16.00', '2020-11-30 03:52:43', 'Delivered', 'Kelly Dillard', '7896547800', 'kelly@gmail.com', '308 Post Avenue');
 
 --
 -- Indexes for dumped tables
@@ -144,6 +163,12 @@ ALTER TABLE `tbl_admin`
 -- Indexes for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -167,21 +192,32 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `tbl_customer`
+--
+ALTER TABLE `tbl_customer`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

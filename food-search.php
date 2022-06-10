@@ -63,7 +63,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="images/food/<?php echo $image_name; ?>"  class="img-responsive img-curve">
                                         <?php 
 
                                     }
@@ -73,7 +73,7 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">$<?php echo $price; ?></p>
+                                <p class="food-price">IDR. <?php echo $price; ?></p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
@@ -87,7 +87,7 @@
                 else
                 {
                     //Food Not Available
-                    echo "<div class='error'>Food not found.</div>";
+                    echo "<div class='error'>Makanan yang anda cari tidak ditemukan</div>";
                 }
             
             ?>

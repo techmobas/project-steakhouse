@@ -20,9 +20,9 @@
         }
         else
         {
-            //CAtegory not passed
+            //Category not passed
             //Redirect to Home page
-            header('location:'.SITEURL);
+            header('location: index.php');
         }
     ?>
 
@@ -80,7 +80,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="images/food/<?php echo $image_name; ?>" class="img-responsive img-curve">
                                         <?php
                                     }
                                 ?>
@@ -89,7 +89,7 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">$<?php echo $price; ?></p>
+                                <p class="food-price">IDR. <?php echo $price; ?></p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
@@ -103,7 +103,7 @@
                 else
                 {
                     //Food not available
-                    echo "<div class='error'>Food not Available.</div>";
+                    echo "<div class='error'>Makanan yang anda cari tidak ditemukan</div>";
                 }
             
             ?>

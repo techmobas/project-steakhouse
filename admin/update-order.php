@@ -40,13 +40,13 @@
                 {
                     //DEtail not Available/
                     //Redirect to Manage Order
-                    header('location:'.SITEURL.'admin/manage-order.php');
+                    header('location: manage-order.php');
                 }
             }
             else
             {
                 //REdirect to Manage ORder PAge
-                header('location:'.SITEURL.'admin/manage-order.php');
+                header('location: manage-order.php');
             }
         
         ?>
@@ -166,13 +166,13 @@
                 {
                     //Updated
                     $_SESSION['update'] = "<div class='success'>Order Updated Successfully.</div>";
-                    header('location:'.SITEURL.'admin/manage-order.php');
+                    header('location: manage-order.php');
                 }
                 else
                 {
                     //Failed to Update
                     $_SESSION['update'] = "<div class='error'>Failed to Update Order.</div>";
-                    header('location:'.SITEURL.'admin/manage-order.php');
+                    header('location: manage-order.php');
                 }
             }
         ?>

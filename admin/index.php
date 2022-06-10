@@ -4,7 +4,11 @@
         <!-- Main Content Section Starts -->
         <div class="main-content">
             <div class="wrapper">
-                <h1>Administrator Dashboard</h1>
+                <?php 
+                    $resultname = mysqli_query($conn, "SELECT * FROM tbl_admin");
+                    while($namerow = mysqli_fetch_array($resultname)){
+                ?>
+                <h1>Welcome, <span style="color: orange"><?php echo $namerow['full_name']; }?></span></h1>
                 <br><br>
                 <?php 
                     if(isset($_SESSION['login']))
