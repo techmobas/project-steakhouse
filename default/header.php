@@ -33,17 +33,13 @@
         <?php
             
             if (isset($_SESSION["userdata"])) { 
-                $userdata = $_SESSION['userdata'];
+            $userdata = $_SESSION['userdata'];
             $resultprofile = mysqli_query($conn, "SELECT * FROM tbl_customer WHERE email='$userdata'");
             $profilerow = mysqli_fetch_array($resultprofile, MYSQLI_ASSOC);
                 ?>
             <li class="nav-item">
                 <a class="nav-link" href="profile.php" style="color: #5d9e5f">
                 <?php
-                    // $userdata = $_SESSION['userdata'];
-                    // $name = $mysqli_query($conn, "SELECT full_name FROM tbl_customer WHERE email=$userdata");
-                    // $whatever_la = mysqli_fetch_array($name);
-                    // echo $profilerow['email']; 
                     echo $profilerow['full_name'];
                 ?></a>
             </li>

@@ -42,7 +42,7 @@
             </div>
             </div>
 
-            <p style="color:black;">Kami adalah perusahaan Makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan Steak mulai dari beef steak, chicken steak, fish steak, pork steak, tempeh steak.</p>
+            <p style="color:black; text-align:center;">Kami adalah perusahaan makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan steak dengan berbagai macam bahan seperti beef, chicken, fish, pork, tempe.</p>
 
             <div class="clearfix"></div>
         </div>
