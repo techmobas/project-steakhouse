@@ -42,7 +42,7 @@
             </div>
             </div>
 
-            <p style="color:black;">Kami adalah perusahaan Makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan Steak mulai dari beef steak, chicken steak, fish steak, pork steak, tempeh steak.</p>
+            <p style="color:black; text-align:center;">Kami adalah perusahaan makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan steak dengan berbagai macam bahan seperti beef, chicken, fish, pork, tempe.</p>
 
             <div class="clearfix"></div>
         </div>
@@ -54,64 +54,72 @@
                 <h3 class="display-4">TELUSURI MENU KAMI</h2>
             </div>
             </div>
-    <div class="container container_categori">
-    
-<?php 
+            <div id="cards_landscape_wrap-2">
+            <div class="container-category">
+                <div class="row">
+                <?php 
+                    //Display all the cateories that are active
+                    //Sql Query
+                    $sql = "SELECT * FROM tbl_category WHERE active='Yes' ORDER BY id DESC LIMIT 4";
 
-    //Display all the cateories that are active
-    //Sql Query
-    $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' ORDER BY id DESC LIMIT 3";
-    //Execute the Query
-    $res = mysqli_query($conn, $sql);
+                    //Execute the Query
+                    $res = mysqli_query($conn, $sql);
 
-    //Count Rows
-    $count = mysqli_num_rows($res);
+                    //Count Rows
+                    $count = mysqli_num_rows($res);
 
-    //CHeck whether categories available or not
-    if($count>0)
-    {
-        
-        while($row=mysqli_fetch_assoc($res))
-        {
-            //Get the Values
-            $id = $row['id'];
-            $title = $row['title'];
-            $image_name = $row['image_name'];
-            ?>
-            
-            
-            <div class="card" style="width: 25rem; margin: 15px;">
-            <img class="card-img-top">
-            <?php 
-                if($image_name=="")
-                {
-                    //Image not Available
-                    echo "<div class='card-img-top'>Image not found.</div>";
-                }
-                else
-                {
-                    //Image Available
-                    ?>
+                    //CHeck whether categories available or not
+                    if($count>0)
+                    {
+                        //CAtegories Available
+                        while($row=mysqli_fetch_assoc($res))
+                        {
+                            //Get the Values
+                            $id = $row['id'];
+                            $title = $row['title'];
+                            $image_name = $row['image_name'];
+                            ?>
+                            
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <a href="category-foods.php?category_id=<?php echo $id; ?>">
+                                    <div class="card-flyer">
+                                        <div class="text-box">
+                                            <div class="image-box">
+                                            <?php 
+                                                if($image_name=="")
+                                                {
+                                                    //Image not Available
+                                                    echo "<div class='error'>Image not found.</div>";
+                                                }
+                                                else
+                                                {
+                                                    //Image Available
+                                                    ?>
+                                                   <img src="images/category/<?php echo $image_name; ?>">
+                                                    <?php
+                                                }
+                                            ?>
+                                            <div class="text-container">
+                                                <h3><?php echo $title; ?></h3>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
 
-                    <img src="images/category/<?php echo $image_name; ?>" class="card-img-top" width="100%">
-                    <?php
-                }
-                    ?>
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $title; ?></h5>
-                <a href="category-foods.php?category_id=<?php echo $id; ?> class="btn btn-primary">Telusuri</a>
+                            <?php
+                        }
+                    }
+                    else
+                    {
+                        //CAtegories Not Available
+                        echo "<div class='error'>Category not found.</div>";
+                    }
+                
+                ?>
             </div>
-            </div>
-            <?php
-        }
-    }
-    else
-    {
-        //CAtegories Not Available
-        echo "<div class='error'>Tidak ditemukan.</div>";
-    }
-
-?>
+        </div>
 
 
 <div class="clearfix"></div>
@@ -123,10 +131,12 @@
             <div class="row">
             <div class="col-12 py-5 text-center">
                 <h3 class="display-4">Pesan tempat sekarang</h2>
+                <h4 class="mb-0"> Nikmati segala sajian hidangan kami</h4>
             </div>
             </div>
 
-            <p class="text-center"><a class="btn btn-danger btn-lg" href="order.php" role="button">Book a Table Now</a></p>
+            <p class="text-center"><a class="btn btn-danger btn-lg" href="order.php" role="button">Pesan Tempat Sekarang</a>\
+            <a class="btn btn-danger btn-lg" href="foods.php" role="button">Lihat Menu Lengkap</a></p>
             <p>&nsbp;</p>
             <p>&nsbp;</p>
             <p>&nsbp;</p>

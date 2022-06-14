@@ -8,7 +8,7 @@
         $id = $_GET['id'];
 
         //SQL Query to Get the Selected Food
-        $sql2 = "SELECT * FROM tbl_food WHERE id=$id";
+        $sql2 = "SELECT * FROM tbl_food WHERE food_id=$id";
         //execute the Query
         $res2 = mysqli_query($conn, $sql2);
 

@@ -1,9 +1,9 @@
 <?php 
     include('default/header.php');
     if(!isset($_SESSION['userdata']))  {
-      header('location: login.php?error=nologin');
-      exit(); 
-    }
+        header('location: login.php?error=nologin');
+        exit();  
+    }   
 ?>
 
 <style>
@@ -52,24 +52,32 @@
               <div class="col-lg-8">
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h1 class="fw-bold mb-0 text-black">Daftar Makanan</h1>
+                    <h1 class="fw-bold mb-0 text-black">E-Recipt</h1>
                   </div>
-                <form action="config/order_config.php" method="post">
+                
                 <hr class="my-4">
                   <?php
-                    $resultname = mysqli_query($conn, "SELECT * FROM tbl_food WHERE category_id ");
-                    $iterate = 0;
-                      while($namerow = mysqli_fetch_array($resultname)){
-                        $foodid = $namerow['food_id'];
-                        $title = $namerow['title'];
-                        $price = $namerow['price'];
-                        $image_name = $namerow['image_name'];
+                    $idanchor = $profilerow['id'];
+
+                    $ordersql= mysqli_query($conn, "SELECT * FROM tbl_order WHERE customer_id='$idanchor'");
+                    $orderrow = mysqli_fetch_array($ordersql);
+                    $orderid = isset($orderrow['order_id']) ? $orderrow['order_id'] : '';
+
+                    $order_detailsql = mysqli_query($conn, "SELECT * FROM tbl_order_detail WHERE order_id='$orderid'");
+                    while($order_detailrow = mysqli_fetch_array($order_detailsql)){
+                        $order_detailid = $order_detailrow['food_id'];
+                        $quantity = isset($order_detailrow['qty']) ? $order_detailrow['qty'] : '';
+
+                        $foodsql = mysqli_query($conn, "SELECT * FROM tbl_food WHERE food_id='$order_detailid'");
+                        while($foodrow = mysqli_fetch_array($foodsql, MYSQLI_ASSOC)){
+                            $foodid = isset($foodrow['food_id']) ? $foodrow['food_id'] : '';
+                            $title = isset($foodrow['title']) ? $foodrow['title'] : '';
+                            $price = isset($foodrow['price']) ? $foodrow['price'] : '';
+                            $image_name = isset($foodrow['image_name']) ? $foodrow['image_name'] : '';
+                            
                   ?>
                     <hr class="my-4">
                     <div class="row mb-4 d-flex justify-content-between align-items-center">
-                      <div class="col-md-1 col-lg-1 col-xl-1">
-                        <input type="checkbox" value="<?php echo $foodid; ?>||<?php echo $iterate; ?>" name="food_id[]" style="">
-                      </div>
                       <div class="col-md-2 col-lg-2 col-xl-2">
                         <img
                           src="images/food/<?php echo $image_name; ?>"
@@ -80,74 +88,70 @@
                       </div>
                       <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                         
-                        <input id="form1" min="0" name="quantity_<?php echo $iterate; ?>" value="0" type="number"
-                          class="form-control" style="width: 75px;"/>
+                        <h6 class="mb-0"><?php echo $quantity; ?></h6>
                         
                       </div>
                       <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                         <h6 class="mb-0">Rp. <?php echo $price; ?></h6>
                       </div>
                     </div>
-                  <?php 
-                  $iterate++;  
-                }  
-                  ?>
+                   <?php 
+                }
+                } ?>     
                   <hr class="my-4">
-                  <div class="pt-5">
-                    <h6 class="mb-0"><a href="index.php" class="text-body">
-                      <i class="fas fa-long-arrow-alt-left me-2"></i>Kembali</a></h6>
-                  </div>
+                  
                 </div>
               </div>
               <div class="col-lg-4 bg-grey">
                 <div class="p-5">
-                  <h3 class="fw-bold mb-5 mt-2 pt-1">Data Pemesanan/Booking</h3>
-                  <hr class="my-4">
 
+                  <hr class="my-4">
+                <?php 
+                    $quantitypeople = isset($orderrow['quantity_people']) ?  $orderrow['quantity_people']: '';
+                    $orderdate = isset($orderrow['order_date']) ?  $orderrow['order_date']: '';
+                    $ordertime = isset($orderrow['order_time']) ?  $orderrow['order_time']: '';
+                    $totale = isset($orderrow['total']) ?  $orderrow['total']: '';
+                ?>
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Jumlah Orang</label>
-                      <input name="quantity_people" min="0" type="number" id="form3Example1c" class="form-control" placeholder="Jumlah orang" required/>
-                      <label for="">Anak diatas 2 tahun, harap dimasukan</label>
+                        <h4 class="mb-0"><?php echo $quantitypeople; ?> Orang </h4>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-calendar fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Tanggal Pesan</label>
-                      <input name="order_date" type="date" id="form3Example1c" class="form-control" placeholder="" required/>
+                        <h4 class="mb-0"><?php echo $orderdate; ?></h4>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-clock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Waktu Pesan</label>
-                      <input name="order_time" type="time" id="form3Example1c" class="form-control" placeholder="" required/>
+                        <h4 class="mb-0"><?php echo $ordertime; ?></h4>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Atas nama</label>
-                      <input name="full_name" type="text" id="form3Example1c" class="form-control" value="<?php echo $profilerow['full_name']; ?>" readonly/>
+                        <h4 class="mb-0"><?php echo $profilerow['full_name']; ?></h4>
                     </div>
                   </div>
 
                   <hr class="my-4">
                  
-                  <!-- <div class="d-flex justify-content-between mb-5">
-                    <h5 class="text-uppercase">Total</h5>
-                    <h5>IDR 137.00</h5>
-                  </div> -->
-                  <span style="color:red;">Harap diperiksa kembali sebelum memesan!</span>
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"> 
-                    <input type="submit" value="Pesan Sekarang!" class="btn btn-success btn-lg">
+                  <div class="d-flex justify-content-between mb-5">
+                    <h3 class="text-uppercase">Total</h3>
+                    <h3 class="mb-0">Rp. <?php echo $totale; ?></h3>
                   </div>
-                </form>
+                  
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <a href = "index.php" class="btn btn-success btn-lg">Kembali</a>&nbsp;&nbsp;&nbsp;
+                    <a href = "delete-order.php" class="btn btn-danger btn-lg">Hapus Pesanan</a>
+                  </div>
+               
                 
                 </div>
               </div>

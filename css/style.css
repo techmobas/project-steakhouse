@@ -1,10 +1,10 @@
 /* CSS for All */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
 * {
     margin: 0 0;
     padding: 0 0;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .container {
@@ -819,14 +819,7 @@ p {
     border-color: #FA6742;
 }
 
-.categories {
-    padding: 4% 0;
-}
 
-.text-left-categori {
-    text-align: left;
-    color: #2f3542;
-}
 
 .line {
     height: 3px;
@@ -836,38 +829,6 @@ p {
     bottom: 40px;
 }
 
-.box-3 {
-    width: 28%;
-    float: left;
-    margin: 2%;
-}
-
-.container_categori {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1%;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    overflow: hidden;
-}
-
-.box-3-categori {
-    flex: 0 0 auto;
-    margin-right: 10px;
-}
-
-.img-responsive-category {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.float-container-categori {
-    position: relative;
-}
 
 .float-text-categori {
     position: absolute;
@@ -880,61 +841,96 @@ p {
     vertical-align: middle;
 }
 
-.pre-btn,
-.nxt-btn {
-    border: none;
-    width: 10vw;
-    height: 45%;
-    position: absolute;
-    top: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-    cursor: pointer;
-    z-index: 8;
-}
-
-.pre-btn {
-    left: 0;
-    transform: rotate(180deg);
-}
-
-.nxt-btn {
-    right: 0;
-}
-
-.pre-btn img,
-.nxt-btn img {
-    opacity: 0.2;
-}
-
-.pre-btn:hover img,
-.nxt-btn:hover img {
-    opacity: 1;
-}
-
-.img-responsive {
-    width: 100%;
-}
-
-.img-curve {
-    border-radius: 15px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pre-btn,
-    .nxt-btn {
-        height: 50%;
-        position: absolute;
-        top: 45%;
-    }
-    .pre-btn img,
-    .nxt-btn img {
-        opacity: 1;
-    }
-}
-
 td {
     padding: 10px;
 }
+
+/*----  Main Style  ----*/
+
+.container-category {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+#cards_landscape_wrap-2{
+    text-align: center;
+    background: #F7F7F7;
+  }
+  #cards_landscape_wrap-2 .container{
+    padding-top: 80px; 
+    padding-bottom: 100px;
+  }
+  #cards_landscape_wrap-2 a{
+    text-decoration: none;
+    outline: none;
+  }
+  #cards_landscape_wrap-2 .card-flyer {
+    border-radius: 5px;
+  }
+  #cards_landscape_wrap-2 .card-flyer .image-box{
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+  }
+  #cards_landscape_wrap-2 .card-flyer .image-box img{
+    -webkit-transition:all .9s ease; 
+    -moz-transition:all .9s ease; 
+    -o-transition:all .9s ease;
+    -ms-transition:all .9s ease; 
+    width: 100%;
+    height: 200px;
+  }
+  #cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+    opacity: 0.7;
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
+  }
+  #cards_landscape_wrap-2 .card-flyer .text-box{
+    text-align: center;
+  }
+  #cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+    padding: 30px 18px;
+  }
+  #cards_landscape_wrap-2 .card-flyer{
+    background: #FFFFFF;
+    margin-top: 50px;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+  }
+  #cards_landscape_wrap-2 .card-flyer:hover{
+    background: #fff;
+    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: 50px;
+  }
+  #cards_landscape_wrap-2 .card-flyer .text-box p{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px; 
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #000000;
+  }
+  #cards_landscape_wrap-2 .card-flyer .text-box h6{
+    margin-top: 0px;
+    margin-bottom: 4px; 
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Black', sans-serif;
+    letter-spacing: 1px;
+    color: #00acc1;
+  }

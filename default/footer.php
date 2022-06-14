@@ -8,7 +8,7 @@
                             Steakhouse
                         </a>
                         <p class="footer-info-text">
-                        Kami adalah perusahaan Makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan Steak mulai dari beef steak, chicken steak, fish steak, pork steak, tempeh steak. Untuk mengetahui info reservasi, menu, dan lainnya silahkan untuk mengikuti kami di Social Media. 
+                        Kami adalah perusahaan makanan yang berbasis di Jakarta Timur, kami menyediakan berbagai macam makanan steak dengan berbagai macam bahan seperti beef, chicken, fish, pork, tempeh. Untuk mengetahui info reservasi, menu, dan lainnya silahkan untuk mengikuti kami di Social Media kami pada link di bawah ini. 
                         </p>
                         <div class="footer-social-link">
                             <h3>Follow us</h3>
@@ -92,10 +92,10 @@
                                         <a href="order.php">Reservation</a>
                                     </li>
                                     <?php 
-                                        $resultprofile = mysqli_query($conn, "SELECT * FROM tbl_customer");
-                                        $profilerow = mysqli_fetch_array($resultprofile);
-
-                                        if (isset($_SESSION["userdata"])) { ?>
+                                        if (isset($_SESSION["userdata"])) { 
+                                            $userdata = $_SESSION['userdata'];
+                                            $resultprofile = mysqli_query($conn, "SELECT * FROM tbl_customer WHERE email='$userdata'");
+                                            $profilerow = mysqli_fetch_array($resultprofile, MYSQLI_ASSOC);?>
                                         <li>
                                             <a href="profile.php"><?php echo $profilerow['full_name']; ?></a>
                                         </li>

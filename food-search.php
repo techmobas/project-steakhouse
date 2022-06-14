@@ -43,7 +43,7 @@
                     while($row=mysqli_fetch_assoc($res))
                     {
                         //Get the details
-                        $id = $row['id'];
+                        $id = $row['food_id'];
                         $title = $row['title'];
                         $price = $row['price'];
                         $description = $row['description'];
@@ -73,7 +73,7 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">IDR. <?php echo $price; ?></p>
+                                <p class="food-price">Rp. <?php echo $price; ?></p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
