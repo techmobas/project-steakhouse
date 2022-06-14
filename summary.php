@@ -61,19 +61,19 @@
 
                     $ordersql= mysqli_query($conn, "SELECT * FROM tbl_order WHERE customer_id='$idanchor'");
                     $orderrow = mysqli_fetch_array($ordersql);
-                    $orderid = $orderrow['order_id'];
+                    $orderid = isset($orderrow['order_id']) ? $orderrow['order_id'] : '';
 
                     $order_detailsql = mysqli_query($conn, "SELECT * FROM tbl_order_detail WHERE order_id='$orderid'");
                     while($order_detailrow = mysqli_fetch_array($order_detailsql)){
                         $order_detailid = $order_detailrow['food_id'];
-                        $quantity = $order_detailrow['qty'];
+                        $quantity = isset($order_detailrow['qty']) ? $order_detailrow['qty'] : '';
 
                         $foodsql = mysqli_query($conn, "SELECT * FROM tbl_food WHERE food_id='$order_detailid'");
                         while($foodrow = mysqli_fetch_array($foodsql, MYSQLI_ASSOC)){
-                            $foodid = $foodrow['food_id'];
-                            $title = $foodrow['title'];
-                            $price = $foodrow['price'];
-                            $image_name = $foodrow['image_name'];
+                            $foodid = isset($foodrow['food_id']) ? $foodrow['food_id'] : '';
+                            $title = isset($foodrow['title']) ? $foodrow['title'] : '';
+                            $price = isset($foodrow['price']) ? $foodrow['price'] : '';
+                            $image_name = isset($foodrow['image_name']) ? $foodrow['image_name'] : '';
                             
                   ?>
                     <hr class="my-4">
@@ -106,25 +106,30 @@
                 <div class="p-5">
 
                   <hr class="my-4">
-
+                <?php 
+                    $quantitypeople = isset($orderrow['quantity_people']) ?  $orderrow['quantity_people']: '';
+                    $orderdate = isset($orderrow['order_date']) ?  $orderrow['order_date']: '';
+                    $ordertime = isset($orderrow['order_time']) ?  $orderrow['order_time']: '';
+                    $totale = isset($orderrow['total']) ?  $orderrow['total']: '';
+                ?>
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Jumlah Orang</label>
-                        <h4 class="mb-0"><?php echo $orderrow['quantity_people']; ?> Orang </h4>
+                        <h4 class="mb-0"><?php echo $quantitypeople; ?> Orang </h4>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Tanggal Pesan</label>
-                        <h4 class="mb-0"><?php echo $orderrow['order_date']; ?></h4>
+                        <h4 class="mb-0"><?php echo $orderdate; ?></h4>
                     </div>
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <div class="form-outline flex-fill mb-0">
                         <label for="">Waktu Pesan</label>
-                        <h4 class="mb-0"><?php echo $orderrow['order_time']; ?></h4>
+                        <h4 class="mb-0"><?php echo $ordertime; ?></h4>
                     </div>
                   </div>
 
@@ -139,7 +144,7 @@
                  
                   <div class="d-flex justify-content-between mb-5">
                     <h3 class="text-uppercase">Total</h3>
-                    <h3 class="mb-0">Rp. <?php echo $orderrow['total']; ?></h3>
+                    <h3 class="mb-0">Rp. <?php echo $totale; ?></h3>
                   </div>
                   
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

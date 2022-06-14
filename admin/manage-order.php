@@ -34,6 +34,8 @@
                         //Count the Rows
                         $count = mysqli_num_rows($res);
 
+                        $sn=1;
+
                         if($count>0)
                         {
                             //Order Available
@@ -51,7 +53,7 @@
                                 ?>
 
                                     <tr>
-                                        <td><?php echo $id; ?> </td>
+                                        <td><?php echo $sn++; ?> </td>
                                         <td><?php echo $qty; ?></td>
                                         <td><?php echo $total; ?></td>
                                         <td><?php echo $order_date; ?></td>
