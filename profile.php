@@ -1,4 +1,9 @@
-<?php include('default/header.php'); ?>
+<?php include('default/header.php'); 
+ if(!isset($_SESSION['userdata']))  {
+    header('location: login.php?error=nologin');
+    exit();  
+}   
+?>
 
 <!-- fOOD sEARCH Section Starts Here -->
 <section class="text-center food-search">
@@ -44,6 +49,9 @@
                 
 
             </table>
+            <div class="container">
+                <a href="summary.php"></a>
+            </div>
         <br /><br /><br /><br /><br /><br />
         </form>
 <!-- </center> -->

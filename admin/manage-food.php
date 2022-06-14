@@ -75,7 +75,7 @@
                             while($row=mysqli_fetch_assoc($res))
                             {
                                 //get the values from individual columns
-                                $id = $row['id'];
+                                $id = $row['food_id'];
                                 $title = $row['title'];
                                 $price = $row['price'];
                                 $image_name = $row['image_name'];

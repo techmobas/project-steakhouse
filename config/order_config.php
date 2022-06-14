@@ -40,7 +40,7 @@ if(isset($_POST['food_id'])){
  		
  		$sql="UPDATE tbl_order SET total='$total' WHERE order_id='$orderid'";
  		$conn->query($sql);
-		header('location: ../index.php');		
+		header('location: ../summary.php');		
 	}
     else {
 		?>

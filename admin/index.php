@@ -67,78 +67,7 @@
                     Total Orders
                 </div>
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
-                        //Creat SQL Query to Get Total Revenue Generated
-                        //Aggregate Function in SQL
-                        $sql4 = "SELECT SUM(total) AS Total FROM tbl_order WHERE status='Delivered'";
-
-                        //Execute the Query
-                        $res4 = mysqli_query($conn, $sql4);
-
-                        //Get the VAlue
-                        $row4 = mysqli_fetch_assoc($res4);
-                        
-                        //GEt the Total REvenue
-                        $total_revenue = $row4['Total'];
-
-                    ?>
-
-                    <h1>$<?php echo $total_revenue; ?></h1>
-                    <br />
-                    Revenue Generated
-                </div>
-
-                <div class="col-4 text-center">
-                    
-                    <?php 
-                        //Sql Query 
-                        $sql6 = "SELECT * FROM tbl_order WHERE status = 'Ordered'";
-                        //Execute Query
-                        $res6 = mysqli_query($conn, $sql6);
-                        //Count Rows
-                        $count6 = mysqli_num_rows($res6);
-                    ?>
-
-                    <h1><?php echo $count6; ?></h1>
-                    <br />
-                    Pending Orders
-                </div>
-
-                <div class="col-4 text-center">
-                    
-                    <?php 
-                        //Sql Query 
-                        $sql7 = "SELECT * FROM tbl_order WHERE status = 'On Delivery'";
-                        //Execute Query
-                        $res7 = mysqli_query($conn, $sql7);
-                        //Count Rows
-                        $count7 = mysqli_num_rows($res7);
-                    ?>
-
-                    <h1><?php echo $count7; ?></h1>
-                    <br />
-                    On Delivery Orders
-                </div>
-
-
-                <div class="col-4 text-center">
-                    
-                    <?php 
-                        //Sql Query 
-                        $sql7 = "SELECT * FROM tbl_order WHERE status = 'Cancelled'";
-                        //Execute Query
-                        $res7 = mysqli_query($conn, $sql7);
-                        //Count Rows
-                        $count7 = mysqli_num_rows($res7);
-                    ?>
-
-                    <h1><?php echo $count7; ?></h1>
-                    <br />
-                    Cancelled Orders
-                </div>
-
+               
 
                 <div class="col-4 text-center">
                     
