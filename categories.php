@@ -5,8 +5,6 @@
 
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
-        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
-        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
         <div class="container">
             <div class="row">
                 <div class="col-12 py-5 text-left">
@@ -15,73 +13,76 @@
                 <div class="col-12">
                     <div class="line"></div>
                 </div>
-                <div class="col-12 py-1">
-                    <h3 class="text-left-categori">STEAK</h3>
-                </div>
             </div>
         </div>
-        <div class="container container_categori">
+        <div id="cards_landscape_wrap-2">
+            <div class="container-category">
+                <div class="row">
+                <?php 
+                    //Display all the cateories that are active
+                    //Sql Query
+                    $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
 
-            <?php 
+                    //Execute the Query
+                    $res = mysqli_query($conn, $sql);
 
-                //Display all the cateories that are active
-                //Sql Query
-                $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
+                    //Count Rows
+                    $count = mysqli_num_rows($res);
 
-                //Execute the Query
-                $res = mysqli_query($conn, $sql);
-
-                //Count Rows
-                $count = mysqli_num_rows($res);
-
-                //CHeck whether categories available or not
-                if($count>0)
-                {
-                    
-                    while($row=mysqli_fetch_assoc($res))
+                    //CHeck whether categories available or not
+                    if($count>0)
                     {
-                        //Get the Values
-                        $id = $row['id'];
-                        $title = $row['title'];
-                        $image_name = $row['image_name'];
-                        ?>
-                        
-                        <a href="category-foods.php?category_id=<?php echo $id; ?>">
-                            <div class="box-3-categori float-container-categori">
-                                <?php 
-                                    if($image_name=="")
-                                    {
-                                        //Image not Available
-                                        echo "<div class='error'>Image not found.</div>";
-                                    }
-                                    else
-                                    {
-                                        //Image Available
-                                        ?>
-
-                                        <img src="images/category/<?php echo $image_name; ?>" class="img-responsive-category img-curve">
-                                        <?php
-                                    }
-                                ?>
-                        
-                                <h3 class="float-text-categori text-white"><?php echo $title; ?></h3>
+                        //CAtegories Available
+                        while($row=mysqli_fetch_assoc($res))
+                        {
+                            //Get the Values
+                            $id = $row['id'];
+                            $title = $row['title'];
+                            $image_name = $row['image_name'];
+                            ?>
+                            
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <a href="category-foods.php?category_id=<?php echo $id; ?>">
+                                    <div class="card-flyer">
+                                        <div class="text-box">
+                                            <div class="image-box">
+                                            <?php 
+                                                if($image_name=="")
+                                                {
+                                                    //Image not Available
+                                                    echo "<div class='error'>Image not found.</div>";
+                                                }
+                                                else
+                                                {
+                                                    //Image Available
+                                                    ?>
+                                                   <img src="images/category/<?php echo $image_name; ?>">
+                                                    <?php
+                                                }
+                                            ?>
+                                            <div class="text-container">
+                                                <h3><?php echo $title; ?></h3>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
 
-                        <?php
+                            <?php
+                        }
                     }
-                }
-                else
-                {
-                    //CAtegories Not Available
-                    echo "<div class='error'>Makanan yang anda cari tidak ditemukan</div>";
-                }
-            
-            ?>
-            
-
-            <div class="clearfix"></div>
+                    else
+                    {
+                        //CAtegories Not Available
+                        echo "<div class='error'>Category not found.</div>";
+                    }
+                
+                ?>
+            </div>
         </div>
+    </div>
+
     </section>
     
     <!-- Categories Section Ends Here -->
